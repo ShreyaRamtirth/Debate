@@ -1,0 +1,19 @@
+{
+  "name": "debate-app",
+  "version": "1.0.0",
+  "description": "This is the backend of the Debate application which is totally based on REST API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyaRamtirth/Debate.git"
+  },
+  "author": "Shreya Ramtirth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShreyaRamtirth/Debate/issues"
+  },
+  "homepage": "https://github.com/ShreyaRamtirth/Debate#readme"
+}
