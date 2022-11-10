@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "This is the backend of the Debate application which is totally based on REST API.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev":"nodemon index.js",
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,18 @@
   "bugs": {
     "url": "https://github.com/ShreyaRamtirth/Debate/issues"
   },
-  "homepage": "https://github.com/ShreyaRamtirth/Debate#readme"
+  "homepage": "https://github.com/ShreyaRamtirth/Debate#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2",
+    "nodemailer": "^6.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
