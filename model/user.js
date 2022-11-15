@@ -19,17 +19,6 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        adhaarNumber: {
-            type: String,
-            unique: true,
-            required: true,
-            maxlength: 12,
-            minlength: 12
-        },
-        address: {
-            type: String,
-            required: true,
-        },
         forgot: {
             type: Boolean,
             default: false
