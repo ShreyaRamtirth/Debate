@@ -16,6 +16,7 @@ router.post('/register', (req, res) => {
             email: req.body.email,
             password: hashedPassword
         })
+        
         const result = await user.save();
         const { password, ...data } = result.toJSON();
         res.send(data);
