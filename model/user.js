@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
         },
         role: {
             type: String,
-            required: false
+            required: true
         },
         forgot: {
             type: Boolean,
