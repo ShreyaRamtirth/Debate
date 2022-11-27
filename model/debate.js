@@ -7,11 +7,11 @@ const debateSchema = new mongoose.Schema(
             required: true
         },
         starting_date: {
-            type: String,
+            type: Date,
             required: true
         },
         ending_date: {
-            type: String,
+            type: Date,
             required: true
         },
         category: {
@@ -23,7 +23,7 @@ const debateSchema = new mongoose.Schema(
             required: false
         },
         published_date: {
-            type: String,
+            type: Date,
             required: true
         },
         participants: {

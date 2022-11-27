@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import dotenv from 'dotenv';
 
 import userRoutes from './routes/userRoutes.js';
+import debateRoutes from './routes/debateRoutes.js';
 
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL, () => {
@@ -22,5 +23,6 @@ app.use(cors({
 app.use(bodyParser.json());
 
 app.use('/user',userRoutes);
+app.use('/debate',debateRoutes);
 
 app.listen(PORT, () => console.log(`Server is runnning on port : http://localhost:${PORT}`));

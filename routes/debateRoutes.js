@@ -1,19 +1,21 @@
 import express from "express";
-import { Debate } from "../model/debate";
-
+import { Debate } from "../model/debate.js";
+import pkg from "jsonwebtoken";
 const router = express.Router();
+const Jwt = pkg;
 
-router.post('/debate/add', (req, res) => {
+router.post('/add', (req, res) => {
     (async function () {
+        const token = req.headers.authorization;
+        const claims = await Jwt.verify(token, "secret");
         const debate = new Debate({
             topic: req.body.topic,
             starting_date: req.body.starting_date,
             ending_date: req.body.ending_date,
             category: req.body.category,
             information: req.body.information,
-            published_date: "25/11/2022"
+            published_date: new Date(Date.now()).toISOString()
         })
-        console.log(debate);
         const result = await debate.save();
         res.send(result);
     })().catch(err => {
@@ -22,5 +24,7 @@ router.post('/debate/add', (req, res) => {
         });
     });
 });
+
+
 
 export default router;
